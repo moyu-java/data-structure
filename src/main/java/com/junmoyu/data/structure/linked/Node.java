@@ -24,10 +24,12 @@ public class Node implements Position {
         this.next = next;
     }
 
+    @Override
     public Object getElement() {
         return element;
     }
 
+    @Override
     public Object setElement(Object element) {
         Object oldElement = this.element;
         this.element = element;
