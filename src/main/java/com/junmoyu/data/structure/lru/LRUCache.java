@@ -17,6 +17,9 @@ public class LRUCache<K, V> extends LinkedHashMap<K, V> {
         this.capacity = capacity;
     }
 
+    /**
+     * 当缓存的元素数量超过了指定的容量时，删除最久未被访问的元素。
+     */
     @Override
     protected boolean removeEldestEntry(Map.Entry<K, V> eldest) {
         return size() > capacity;
